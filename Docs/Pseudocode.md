@@ -21,7 +21,10 @@ If query string has notice & type of notice:
   Display type of notice
 ```
 
-There will be a base controller/view that will know all the types of notices that can be displayed.
+There will be a base controller/view that will know all the types of notices that can be displayed. These are different from custom notices, where each view will deal with it differently.
+
+### Types of Notifications
+* Logged in successfully 
 
 ## Home "/" [GET]
 
@@ -84,6 +87,9 @@ As confirm password changes do:
     Update passMatch -> "Passwords match" (green)
   Else:
     Update passMatch -> "Passwords do not match" (red)
+
+If username, password and confirm password are valid:
+  Enable submit button
 ```
 
 ### Backend
@@ -108,14 +114,42 @@ Validate username:
 
 ## Login "/login" [GET]
 
+### Backend
+```
+If there is a password in the DB with a username of {username} and password of {password}:
+  Redirect to dashboard
+Else
+  Send custom notice in query string that username/password is incorrect.
 ```
 
+### Frontend
 ```
+If username & password have been entered:
+  Enable submit button
+
+If custom notice:
+  Display username/password is incorrect.
+```
+
+### Custom Notice
+Username/password is incorrect
 
 ## Create Friend Group "/newgroup" [GET, POST]
 
+```
+```
+
 ## Friend Group "/friendgroup/{name}" [GET]
+
+```
+```
 
 ## Invite Group "/friendgroup [POST]
 
+```
+```
+
 ## New Definition "/newdef" [GET, POST]
+
+```
+```
