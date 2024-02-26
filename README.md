@@ -72,12 +72,6 @@ Notice Example
 
 Buttons and notices will have a 50% opacity to distinguish between them.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c91525ad-edc7-4a36-8474-11fb8acc77aa/f55e22fb-54f0-4e11-9a8f-3fb57b76c3f3/Untitled.png)
-
-Notices will have 50% opacity to distinguish between buttons.
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c91525ad-edc7-4a36-8474-11fb8acc77aa/d7e02884-7813-4d2b-86b1-bcd7736a2349/Untitled.png)
-
 # Typography
 
 ## Display Font
