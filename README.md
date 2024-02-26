@@ -33,13 +33,19 @@ Yellow represents friendship.
 
 <img width="40" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/23df766f-6e96-46ee-a5bf-be05d4e5516e">
 
+#9BFAC0
+
 Green represents collaboration.
 
 ## Accent Colour
 
+#9BA6FA
+
 <img width="36" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/4d564ad1-f972-493b-9634-85e3c4ca2088">
 
 ## Colour for Errors
+
+#FA9BD5
 
 <img width="36" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/b1ad4184-f2eb-4a77-b44b-9789be1f34ab">
 
@@ -48,6 +54,8 @@ Green represents collaboration.
 <img width="557" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/0f57faee-8a11-478f-bc0b-8e67d821321a">
 
 ## Background Colour
+
+#F9F9F9
 
 <img width="42" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/06391dfd-b678-48be-8299-cedf4a7a3b3a">
 
