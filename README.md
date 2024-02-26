@@ -39,15 +39,17 @@ Green represents collaboration.
 
 ## Accent Colour
 
+<img width="36" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/4d564ad1-f972-493b-9634-85e3c4ca2088">
+
 #9BA6FA
 
-<img width="36" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/4d564ad1-f972-493b-9634-85e3c4ca2088">
 
 ## Colour for Errors
 
+<img width="36" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/b1ad4184-f2eb-4a77-b44b-9789be1f34ab">
+
 #FA9BD5
 
-<img width="36" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/b1ad4184-f2eb-4a77-b44b-9789be1f34ab">
 
 ## The whole colour combination
 
@@ -55,11 +57,9 @@ Green represents collaboration.
 
 ## Background Colour
 
-#F9F9F9
-
 <img width="42" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/06391dfd-b678-48be-8299-cedf4a7a3b3a">
 
-Off white #f9f9f9
+Off white #f9f9f9.
 
 ## Buttons vs Notices
 <img width="297" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/24a4bbe1-5434-4218-aa58-9b1774bafd5b">
