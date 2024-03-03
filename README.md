@@ -17,7 +17,7 @@ The MVP should contain:
 - Ability to search definitions.
 
 # Design 
-The figma wireframe is here: https://www.figma.com/file/UpFv3ehKFYppPTeGlcknIg/Frendnary?type=design&node-id=0%3A1&mode=dev&t=XCArnP1NjRhFjBRr-1
+The [figma wireframe](https://www.figma.com/file/LbMP7WT6jkXyOy5G0B1F7l/Friend-Dictionary?type=design&node-id=0%3A1&mode=dev&t=77MVXnvrxcehdqov-1).
 
 # Background on the design
 
