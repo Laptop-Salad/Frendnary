@@ -1,0 +1,248 @@
+:root {
+    --yellow: #FAEF9B;
+    --purple: #9BA6FA;
+    --green: #9BFAC0;
+    --pink: #FA9BD5;
+    --white: #F9F9F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    /* To allow main to take up remaining height from navbar*/
+    display:flex;
+    flex-direction:column;
+}
+
+/* Padding for each outer section */
+header, main, footer, #navToggledContent {
+    padding: 20px 80px;
+}
+
+h1, h2, h3 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bold-text {
+    font-family: "Archivo Black", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* btns */
+.btn-lg {
+    font-size: 28px;
+    padding: 10px 20px !important;
+}
+
+.p-btn {
+    background-color: var(--purple);
+    padding: 10px 10px;
+
+    font-family: "Archivo Black", sans-serif;
+}
+
+.r-btn {
+    background-color: var(--pink);
+    padding: 10px 10px;
+
+    font-family: "Archivo Black", sans-serif;
+}
+
+.y-btn {
+    background-color: var(--yellow);
+    padding: 10px 10px;
+
+    font-family: "Archivo Black", sans-serif;
+}
+
+/* btns end */
+
+/* Header */
+
+header {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    background-color: var(--green);
+
+    flex: 0 0 auto; /* don't grow, take up only needed space */
+}
+
+header .logo, header ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header ul {
+    justify-content: end;
+    list-style-type: none;
+}
+
+header ul li {
+    margin: 0 20px;
+}
+
+/* Header - Mobile */
+
+#mobileContent {
+    display: none;
+    justify-content: end;
+}
+
+#mobileContent img {
+    width: 20%;
+}
+
+#navToggledContent {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--green); 
+
+    position: fixed;
+    z-index: 200;
+
+    /* changes */
+    display: none;
+}
+
+#hamburgerDiv {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+
+#hamburgerDiv .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+#hamburgerDiv .hamburger-cross {
+    display: flex;
+    justify-content: end;
+}
+
+#navToggledContent ul {
+    justify-content: end;
+    list-style-type: none;
+}
+
+#navToggledContent ul li {
+    margin: 20px 0;
+}
+
+/* Header - Mobile end */
+
+/* Centered page */
+.centered {
+    flex: 1 0 auto; /* Grow, don't shrink */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow);
+}
+
+.centered h1 {
+    text-align: center;
+}
+
+.centered > * {
+    margin: 20px 0;
+}
+
+/* Centered page end */
+
+/* Header end */
+
+/* Landing */
+.landing h1 {
+    font-size: 64px;
+}
+
+.landing p {
+    width: 80%;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Landing End */
+
+/* Error page */
+.error h1 {
+    font-size: 64px;
+}
+
+.error p {
+    width: 80%;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Error page end */
+
+/* Media queries */
+@media only screen and (max-width: 800px) {
+    /* Mobile navbar */
+    header .links {
+        display: none;
+    }
+
+    header #mobileContent {
+        display: flex;
+    }
+
+    #navToggledContent ul {
+        height: 100%;
+        width: 100%;
+    }
+
+    #navToggledContent ul li {
+        margin: 40px 0;
+    }
+    /* Mobile navbar end */
+}
+
+@media only screen and (max-width: 425px) {
+    /* Padding for each outer section */
+    header, main, footer, #navToggledContent {
+        padding: 20px;
+    }
+
+    /* Mobile navbar */
+    #hamburgerDiv img {
+        width: 20%;
+    }
+    /* Mobile navbar end */
+
+    /* Text */
+    .landing h1,
+    .error h1 {
+        font-size: 48px;
+    }
+
+    .landing p,
+    .error p {
+        font-size: 24px;
+    }
+    
+    /* Text end */
+}
+
+/* Media queries end */
