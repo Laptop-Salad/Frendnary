@@ -1,5 +1,6 @@
 import './bootstrap';
 
+// Navbar
 $("#navOpen").on("click", function () {
     // Close defaultNav
     $("#defaultNav").hide();
@@ -16,3 +17,14 @@ $("#navClose").on("click", function () {
     $("#defaultNav").show();
 });
   
+// Navbar end
+
+// Popup Messages
+$("#msgSuccess button").on("click", function () {
+    $("#msgSuccess").hide();
+})
+
+$("#msgError button").on("click", function () {
+    $("#msgError").hide();
+})
+// Popup Messages end

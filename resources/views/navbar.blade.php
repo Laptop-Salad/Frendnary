@@ -6,7 +6,7 @@
     <nav id="defaultNav">
         <div class="links">
             <ul>
-                <li><a href="/login" class="bold-text">Sign In</a></li>
+                <li><a href="/signin" class="bold-text">Sign In</a></li>
                 <li><a href="/signup" class="p-btn">Start Now!</a></li>
             </ul>
         </div>
@@ -29,9 +29,7 @@
     </div>
 
     <ul>
-        <li><a href="/login" class="bold-text">Sign In</a></li>
+        <li><a href="/signin" class="bold-text">Sign In</a></li>
         <li><a href="/signup" class="p-btn">Start Now!</a></li>
     </ul>
 </nav>
-
-@vite('resources/js/app.js')
