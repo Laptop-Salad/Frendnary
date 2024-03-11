@@ -3,17 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class FriendGroupMember extends Model
 {
     use HasFactory;
 
-    protected $table = "user";
+    protected $table = "friend_group_member";
     protected $primaryKey = "id";
-    protected $fillable = ["username", "password"];
+    protected $fillable = ["user_id", "friend_group_id"];
     public $incrementing = true;
     public $timestamps = false; // no updated_at and created_at column
 }

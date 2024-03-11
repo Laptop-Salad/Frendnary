@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\UserAvailController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -12,7 +13,7 @@ use Illuminate\View\View;
 
 class SignUpController extends Controller
 {
-    public function store(Request $request) 
+    public function store(Request $request)  
     {
         $validation = $request->validate([
             "username" => ["required", "string", "min:3", "max:36"],
@@ -27,6 +28,16 @@ class SignUpController extends Controller
 
         $username = $request->input("username");
         $hashedPassword = Hash::make($request->input("password"));
+
+        // Ensure username isnt currently being used
+        $userAvail = new UserAvailController();
+        $checkUserAvail = $userAvail->checkAvail($username);
+
+        if ($checkUserAvail->getData()->userAvail == false) {
+            session()->flash("error","There was an unexpected error creating your account,
+             please try again later.");
+            return redirect("/signup");
+        }
 
         try {
             $user = User::create([

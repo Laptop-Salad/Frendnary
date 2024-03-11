@@ -11,8 +11,13 @@
     </p>
 
     <h1>{{ Auth::user()->username }}</h1>
-    <button class="p-btn">Create New Friend Group</button>
+    <a class="p-btn" href="/newgroup">Create New Friend Group</a>
 
     <h2>My Friend Groups</h2>
+    <div>
+        @foreach ($groups as $group)
+            <a href="/group/{{ $group }}" class="y-btn">{{ $group }}</a>
+        @endforeach
+    </div>
 </main>
 @stop

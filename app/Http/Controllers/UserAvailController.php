@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use DB;
+use App\Models\User;
 
 class UserAvailController extends Controller
 {
     public function checkAvail($username) {
         $username = strtolower($username);
-        $user = DB::table("user")->get()->where("lower(username)", $username)->value("id");
+        $user = User::whereRaw("LOWER(username) = '${username}'")->value("id");
 
         if (empty($user)) {
             return response()->json([

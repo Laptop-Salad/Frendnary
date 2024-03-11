@@ -8,7 +8,7 @@
             <ul>
                 <li><a href="/newgroup" class="p-btn">Create New Friend Group</a></li>
                 <li><a href="/logout" class="r-btn">Log out</a></li>
-                <li><a href="/dashboard" class="y-btn">Me</a></li>
+                <li><a href="/dashboard" class="y-btn">Dashboard</a></li>
             </ul>
         </div>
 
@@ -32,7 +32,7 @@
     <ul>
         <li><a href="/newgroup" class="p-btn">Create New Friend Group</a></li>
         <li><a href="/logout" class="r-btn">Log out</a></li>
-        <li><a href="/dashboard" class="y-btn">Me</a></li>
+        <li><a href="/dashboard" class="y-btn">Dashboard</a></li>
     </ul>
 </nav>
 
