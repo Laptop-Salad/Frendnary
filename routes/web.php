@@ -42,3 +42,7 @@ Route::get("/newgroup", function () {
 Route::post("/newgroup", "App\Http\Controllers\NewGroupController@store")->middleware("auth.basic");
 
 Route::get("/groupAvail/{groupname}", "App\Http\Controllers\GroupAvailController@checkAvail")->middleware("auth.basic");
+
+Route::get("/group/{groupname}", function () {
+    return view("group");
+})->middleware("auth.basic");

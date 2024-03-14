@@ -26,7 +26,7 @@ class SignInController extends Controller
         }
  
         session()->flash("error", 
-        "There was an unexpected error signing in, please try again later.");
+        "Incorrect username or password.");
         return redirect("/signin");
     }
 }
