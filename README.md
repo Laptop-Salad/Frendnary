@@ -1,89 +1,66 @@
-# Frendnary
-Frendnary brings the memories and lore of friend groups into their own central and collaborative private dictionary.
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-# Current Stage
-The MVP is being developed. 
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## The MVP (Cycle 1)
+## About Laravel
 
-The MVP should contain:
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- A home page with a title, subtitle and callout.
-- A signup/login page.
-- A create friend group page.
-- Ability to add others to friend group.
-- Ability to add a definition to the friend group with origin and examples.
-- Ability to edit/delete definitions.
-- Ability to search definitions.
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-# Design 
-The [figma wireframe](https://www.figma.com/file/LbMP7WT6jkXyOy5G0B1F7l/Friend-Dictionary?type=design&node-id=0%3A1&mode=dev&t=77MVXnvrxcehdqov-1).
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-# Background on the design
+## Learning Laravel
 
-## Primary Colour
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-<img width="43" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/efe046ea-2fd3-46fb-a84d-dd8b7cc84028">
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-#FAEF9B
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-Yellow represents friendship.
+## Laravel Sponsors
 
-## Secondary Colour
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-<img width="40" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/23df766f-6e96-46ee-a5bf-be05d4e5516e">
+### Premium Partners
 
-#9BFAC0
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
-Green represents collaboration.
+## Contributing
 
-## Accent Colour
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-<img width="36" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/4d564ad1-f972-493b-9634-85e3c4ca2088">
+## Code of Conduct
 
-#9BA6FA
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
+## Security Vulnerabilities
 
-## Colour for Errors
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-<img width="36" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/b1ad4184-f2eb-4a77-b44b-9789be1f34ab">
+## License
 
-#FA9BD5
-
-
-## The whole colour combination
-
-<img width="557" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/0f57faee-8a11-478f-bc0b-8e67d821321a">
-
-## Background Colour
-
-<img width="42" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/06391dfd-b678-48be-8299-cedf4a7a3b3a">
-
-Off white #f9f9f9.
-
-## Buttons vs Notices
-<img width="297" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/24a4bbe1-5434-4218-aa58-9b1774bafd5b">
-Button Example
-
-<br>
-
-<img width="448" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/616a032b-4413-4375-a252-adc12f62d005">
-Notice Example
-
-Buttons and notices will have a 50% opacity to distinguish between them.
-
-# Typography
-
-## Display Font
-
-Using a blocky display font for titles, logo and callouts → Archivo Black.
-
-<img width="451" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/4f631fb9-b998-446f-a03f-4fc2e45565d2">
-
-Title using Archivo Black against primary colour.
-
-## Body Copy Font
-
-<img width="439" alt="image" src="https://github.com/Laptop-Salad/Frendnary/assets/80591698/6fb5e186-dd81-4fca-8c57-b7b6f14c8f1a">
-
-
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
