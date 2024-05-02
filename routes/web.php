@@ -1,6 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Home;
+use App\Livewire\Dashboard;
 
-Route::get('/', Home::class);
+Route::view('/', 'home')->name('home');
+ 
+Route::get('/dashboard', Dashboard::class)
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+Route::view('profile', 'profile')
+    ->middleware(['auth'])
+    ->name('profile');
+
+require __DIR__.'/auth.php';
