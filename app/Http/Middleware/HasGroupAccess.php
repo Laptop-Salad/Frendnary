@@ -22,8 +22,6 @@ class HasGroupAccess
         $user_in_group = GroupUser::where('group_id', $group->id)
             ->where('user_id', auth()->user()->id)->get();
 
-        dump($user_in_group);
-
         if ($user_in_group->isEmpty()) {
             abort(403);
         }
