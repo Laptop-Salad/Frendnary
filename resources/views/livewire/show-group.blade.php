@@ -26,8 +26,8 @@
                     </div>
                     <p>
                         {{$definition->definition}}
-                        <span> - {{$definition->creator->name}}</span>
                     </p>
+                    <p class="my-2 text-gray-600 text-sm">Submitted by {{$definition->creator->name}}</p>
                 </div>
             @endforeach
         </div>
