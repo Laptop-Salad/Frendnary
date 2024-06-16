@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('groups', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+        Schema::create('definitions', function (Blueprint $table) {
+            $table->id();
+            $table->foreignIdFor(\App\Models\User::class, 'created_by');
+            $table->foreignIdFor(\App\Models\Group::class);
+            $table->smallInteger('type'); // enum
             $table->string('name');
-            $table->string('slug');
+            $table->string("definition");
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('groups');
+        Schema::dropIfExists('definitions');
     }
 };

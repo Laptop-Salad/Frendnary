@@ -1,7 +1,9 @@
-@props(['name', 'color' => 'bg-fpurple'])
+@props(['route', 'color' => 'bg-fpurple'])
 
-<div class="{{ $color }} px-4 py-2">
-    <a href="{{ route($name) }}" class="font-bold">
+<div {{ $attributes->merge([
+        'class' => $color . " px-4 py-2 rounded-sm hover:shadow-lg transition-shadow"
+    ])}}>
+    <a href="{{$route}}" class="font-bold">
         {{ $slot }}
     </a>
 </div>

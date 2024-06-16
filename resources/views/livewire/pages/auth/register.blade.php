@@ -80,9 +80,9 @@ new #[Layout('components.layouts.guest')] class extends Component
                 {{ __('Already have an account?') }}
             </a>
 
-            <x-primary-button class="ms-4">
+            <x-pack.button class="ms-4" type="submit">
                 {{ __('Sign Up') }}
-            </x-primary-button>
+            </x-pack.button>
         </div>
     </form>
 </div>
