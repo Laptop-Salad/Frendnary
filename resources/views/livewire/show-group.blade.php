@@ -14,20 +14,32 @@
 
         <div class="md:mt-10 mt-4 space-y-4">
             @foreach($this->definitions as $definition)
-                <div wire:key="{{$definition->id}}" class="border-b border-slate-300 md:p-5 p-2">
-                    @php($type = \App\Definitions\Type::from($definition->type))
-                    <div class="{{$type->colour()}} p-1 inline-block mb-2 rounded-sm font-semibold">
-                        {{$type->name}}
-                    </div>
+                <div wire:key="{{$definition->id}}" class="border-b border-slate-300 md:p-5 p-2 grid grid-rows-4 md:grid-cols-4">
+                    <div class="row-span-3 md:col-span-3">
+                        @php($type = \App\Definitions\Type::from($definition->type))
+                        <div class="{{$type->colour()}} p-1 inline-block mb-2 rounded-sm font-semibold">
+                            {{$type->name}}
+                        </div>
 
-                    <div class="md:flex md:space-x-2 items-center mb-2">
-                        <h2 class="text-xl font-semibold">{{$definition->name}}</h2>
-                        <p>{{$definition->created_at->diffForHumans()}}</p>
+                        <div class="md:flex md:space-x-2 items-center mb-2">
+                            <h2 class="text-xl font-semibold">{{$definition->name}}</h2>
+                            <p>{{$definition->created_at->diffForHumans()}}</p>
+                        </div>
+                        <p>
+                            {{$definition->definition}}
+                        </p>
+                        <p class="my-2 text-gray-600 text-sm">Submitted by {{$definition->creator->name}}</p>
                     </div>
-                    <p>
-                        {{$definition->definition}}
-                    </p>
-                    <p class="my-2 text-gray-600 text-sm">Submitted by {{$definition->creator->name}}</p>
+                    <div class="flex items-center justify-start md:justify-end space-x-2">
+                        <x-pack.button
+                            wire:click="editDefinition({{$definition}})"
+                            color="bg-fyellow">Edit</x-pack.button>
+                        <x-pack.button
+                            wire:click="deleteDefinition({{$definition}})"
+                            wire:confirm="Are you sure you want to delete this definition?"
+                            color="bg-fpink">Delete
+                        </x-pack.button>
+                    </div>
                 </div>
             @endforeach
         </div>

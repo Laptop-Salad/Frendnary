@@ -21,7 +21,7 @@ class ShowGroup extends Component
     public $show_invite_friend = false;
 
     public function getDefinitionsProperty() {
-        return Definition::where('group_id', $this->group->id)->paginate();
+        return Definition::where('group_id', $this->group->id)->orderByDesc('created_at')->paginate();
     }
 
     public function saveDefinition() {
@@ -30,6 +30,16 @@ class ShowGroup extends Component
         $this->definition_form->save();
         $this->show_create_def = false;
         $this->definition_form->reset();
+    }
+
+    public function editDefinition(Definition $definition) {
+        $this->definition_form->set($definition);
+        $this->show_create_def = true;
+    }
+
+    public function deleteDefinition(Definition $definition) {
+        $definition->delete();
+        session()->flash('message', 'Definition deleted successfully.');
     }
 
     public function saveInvite() {
