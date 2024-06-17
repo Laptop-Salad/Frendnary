@@ -25,7 +25,9 @@ class ShowGroup extends Component
     }
 
     public function saveDefinition() {
-        $this->definition_form->created_by = auth()->user()->id;
+        if (!isset($this->definition_form->id)) {
+            $this->definition_form->created_by = auth()->user()->id;
+        }
         $this->definition_form->group_id = $this->group->id;
         $this->definition_form->save();
         $this->show_create_def = false;
