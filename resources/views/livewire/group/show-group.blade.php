@@ -12,6 +12,13 @@
             </x-pack.button>
         </div>
 
+        <div class="mt-4 md:grid md:grid-cols-2 space-x-2">
+            <x-text-input class="w-full" wire:model.live="search" placeholder="Search for name, description" />
+            <div class="flex items-center">
+                <p class="text-greyed font-semibold">Results: {{$this->definitions->count()}}</p>
+            </div>
+        </div>
+
         <div class="md:mt-10 mt-4 space-y-4">
             @foreach($this->definitions as $definition)
                 <div wire:key="{{$definition->id}}" class="border-b border-slate-300 md:p-5 p-2 grid grid-rows-4 md:grid-cols-4">
@@ -49,41 +56,7 @@
         </div>
     </div>
 
-    <x-pack.modal title="Create Definition" show="show_create_def">
-        <form wire:submit="saveDefinition" class="flex flex-col space-y-4">
-            <x-form.select name="Type" wire:model="definition_form.type" required>
-                <option value="">None Selected</option>
+    <x-group.definition-modal />
 
-                @foreach(\App\Definitions\Type::cases() as $type)
-                    <option value="{{$type}}">{{$type->name}}</option>
-                @endforeach
-            </x-form.select>
-
-            <x-form.text wire:model="definition_form.name" name="Name" required>
-                <x-slot:help>
-                    Name for this definition.
-                </x-slot:help>
-            </x-form.text>
-
-            <x-form.text wire:model="definition_form.definition" name="Description" required>
-                <x-slot:help>
-                    The description or definition.
-                </x-slot:help>
-            </x-form.text>
-
-            <x-pack.button type="submit">Create</x-pack.button>
-        </form>
-    </x-pack.modal>
-
-    <x-pack.modal title="Invite Friend" show="show_invite_friend">
-        <form wire:submit="saveInvite" class="flex flex-col space-y-4">
-            <x-form.text type="email" wire:model="invite_form.user_email" name="Friend's Email" required>
-                <x-slot:help>
-                    Ask your friend for the email they used to open an account with us!
-                </x-slot:help>
-            </x-form.text>
-
-            <x-pack.button type="submit">Create</x-pack.button>
-        </form>
-    </x-pack.modal>
+    <x-group.invite-friend />
 </div>

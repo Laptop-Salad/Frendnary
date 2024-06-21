@@ -21,6 +21,7 @@ export default {
                 'info': '#9BD4FA',
                 'action': '#9BA6FA',
                 'fwhite': '#F9F9F9',
+                'greyed': '#36454F'
             }
         },
     },

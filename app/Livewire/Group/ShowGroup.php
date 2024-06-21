@@ -11,6 +11,8 @@ use Livewire\Component;
 
 class ShowGroup extends Component
 {
+    use Searchable;
+
     #[Locked]
     public Group $group;
 
@@ -21,7 +23,10 @@ class ShowGroup extends Component
     public $show_invite_friend = false;
 
     public function getDefinitionsProperty() {
-        return Definition::where('group_id', $this->group->id)->orderByDesc('created_at')->paginate();
+        $query = Definition::where('group_id', $this->group->id)->orderByDesc('created_at');
+        $query = $this->search($query);
+
+        return $query->paginate();
     }
 
     public function saveDefinition() {
