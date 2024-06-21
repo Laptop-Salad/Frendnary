@@ -35,8 +35,10 @@ new #[Layout('components.layouts.guest')] class extends Component
         $this->redirect(route('dashboard', absolute: false), navigate: true);
     }
 }; ?>
-
+{{--todo: back button--}}
 <div class="w-full">
+    <h1 class="mb-4 text-xl">Register</h1>
+
     <form wire:submit="register">
         <!-- Name -->
         <div>
@@ -80,7 +82,7 @@ new #[Layout('components.layouts.guest')] class extends Component
                 {{ __('Already have an account?') }}
             </a>
 
-            <x-pack.button class="ms-4" type="submit">
+            <x-pack.button class="ms-4" type="submit" color="bg-primary">
                 {{ __('Sign Up') }}
             </x-pack.button>
         </div>

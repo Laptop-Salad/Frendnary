@@ -9,8 +9,8 @@ enum Type: int
 
     public function colour() {
         return match($this) {
-            self::Definition => "bg-fpurple",
-            self::Lore => "bg-fyellow",
+            self::Definition => "bg-primary",
+            self::Lore => "bg-action",
         };
     }
 }

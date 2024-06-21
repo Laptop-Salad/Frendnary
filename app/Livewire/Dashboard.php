@@ -2,13 +2,44 @@
 
 namespace App\Livewire;
 
+use App\Models\Group;
 use App\Models\GroupUser;
 use App\Models\Invite;
-use Illuminate\Validation\Rules\In;
+use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class Dashboard extends Component
 {
+    #[Validate(['required', 'string'])]
+    public $name;
+
+    public $error;
+    public $show_create_group = false;
+
+    public function save() {
+        $this->validateOnly('name');
+
+        if (Group::where('name', $this->name)->first()) {
+            $this->error = "Group with that name already exists";
+            return;
+        }
+
+        $slug = strtolower(str_replace(' ', '-', $this->name));
+
+        $group = Group::create([
+            'name' => $this->name,
+            'slug' => $slug
+        ]);
+
+        GroupUser::create([
+            'user_id' => auth()->user()->id,
+            'group_id' => $group->id
+        ]);
+
+        $this->name = null;
+        $this->redirect("/dashboard");
+    }
+
     public function generateGreeting() {
         $greetings = [
             "Hello,",
@@ -47,6 +78,10 @@ class Dashboard extends Component
         ]);
 
         $invite->delete();
+    }
+
+    public function toggleCreateGroup() {
+        $this->show_create_group = !$this->show_create_group;
     }
 
     public function render()

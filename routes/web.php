@@ -8,11 +8,7 @@ Route::get('/dashboard', App\Livewire\Dashboard::class)
     ->middleware(['auth'])
     ->name('dashboard');
 
-Route::get('/groups/create', App\Livewire\CreateGroup::class)
-    ->middleware(['auth'])
-    ->name("groups.create");
-
-Route::get('/groups/{group}', App\Livewire\ShowGroup::class)
+Route::get('/groups/{group}', \App\Livewire\Group\ShowGroup::class)
     ->middleware(['auth', '\App\Http\Middleware\HasGroupAccess'])
     ->name("groups.group");
 

@@ -24,7 +24,11 @@ new #[Layout('components.layouts.guest')] class extends Component
     }
 }; ?>
 
+{{--todo: back button--}}
+
 <div>
+    <h1 class="mb-4 text-xl">Login</h1>
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -63,7 +67,7 @@ new #[Layout('components.layouts.guest')] class extends Component
                 </a>
             @endif
 
-            <x-pack.button class="ms-3" type="submit">
+            <x-pack.button class="ms-3" type="submit" color="bg-primary">
                 {{ __('Log in') }}
             </x-pack.button>
         </div>

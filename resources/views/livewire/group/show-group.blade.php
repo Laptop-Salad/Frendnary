@@ -7,7 +7,7 @@
                 New definition
             </x-pack.button>
 
-            <x-pack.button color="bg-fyellow" wire:click="showInviteModal">
+            <x-pack.button wire:click="showInviteModal">
                 Invite friend
             </x-pack.button>
         </div>
@@ -33,11 +33,11 @@
                     <div class="flex items-center justify-start md:justify-end space-x-2">
                         <x-pack.button
                             wire:click="editDefinition({{$definition}})"
-                            color="bg-fyellow">Edit</x-pack.button>
+                            color="bg-action">Edit</x-pack.button>
                         <x-pack.button
                             wire:click="deleteDefinition({{$definition}})"
                             wire:confirm="Are you sure you want to delete this definition?"
-                            color="bg-fpink">Delete
+                            color="bg-danger">Delete
                         </x-pack.button>
                     </div>
                 </div>

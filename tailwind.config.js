@@ -15,11 +15,12 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                'fyellow': '#FAEF9B',
-                'fgreen': '#9BFAC0',
-                'fpurple': '#9BA6FA',
+                'primary': '#FAEF9B', // navbar, CTA
+                'danger': '#F86A8A',
+                'success': '#9BFAC0',
+                'info': '#9BD4FA',
+                'action': '#9BA6FA',
                 'fwhite': '#F9F9F9',
-                'fpink': '#FA9BD5'
             }
         },
     },

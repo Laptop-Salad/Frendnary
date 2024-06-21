@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Group;
 
 use App\Livewire\Forms\DefinitionForm;
 use App\Livewire\Forms\InviteForm;
@@ -41,7 +41,6 @@ class ShowGroup extends Component
 
     public function deleteDefinition(Definition $definition) {
         $definition->delete();
-        session()->flash('message', 'Definition deleted successfully.');
     }
 
     public function saveInvite() {
@@ -61,6 +60,6 @@ class ShowGroup extends Component
 
     public function render()
     {
-        return view('livewire.show-group');
+        return view('livewire.group.show-group');
     }
 }
