@@ -7,7 +7,6 @@
 ])
 
 <button {{ $attributes->merge([
-    // todo: conditional class hover
             'class' =>  "px-4 py-2 space-x-2 cursor-pointer transition-shadow rounded-sm hover:shadow-lg " . $color
         ]) }}
         type="{{ $type }}">

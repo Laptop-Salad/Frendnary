@@ -13,9 +13,18 @@
         </div>
 
         <div class="mt-4 md:grid md:grid-cols-2 space-x-2">
-            <x-text-input class="w-full" wire:model.live="search" placeholder="Search for name, description" />
-            <div class="flex items-center">
+            <div class="flex items-center space-x-2">
+                <x-text-input class="w-2/3" wire:model.live="search" placeholder="Search for name, description" />
                 <p class="text-greyed font-semibold">Results: {{$this->definitions->count()}}</p>
+            </div>
+            <div class="flex justify-end">
+                <x-pack.filter-menu show="show_type_filters" title="Type">
+                    <x-pack.filter-checkbox-item title="Definition"
+                                                 model="filters.definition" />
+
+                    <x-pack.filter-checkbox-item title="Lore"
+                                                 model="filters.lore" />
+                </x-pack.filter-menu>
             </div>
         </div>
 

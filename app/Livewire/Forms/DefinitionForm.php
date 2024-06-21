@@ -16,9 +16,9 @@ class DefinitionForm extends Form
     #[Validate(['required', 'in:1,2'])]
     public $type = 1;
     #[Validate(['required', 'string'])]
-    public $name = "Name";
+    public $name;
     #[Validate(['required', 'string'])]
-    public $definition = "Definition";
+    public $definition;
 
     public function set(Definition $definition) {
         $this->id = $definition->id;
