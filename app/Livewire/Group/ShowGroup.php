@@ -24,9 +24,6 @@ class ShowGroup extends Component
     public $show_create_def = false;
     public $show_invite_friend = false;
 
-    // Filters
-    public $show_type_filters = false;
-
     public function getDefinitionsProperty() {
         $query = Definition::where('group_id', $this->group->id)->orderByDesc('created_at');
         $query = $this->filters->apply($query);

@@ -6,6 +6,10 @@
             </x-slot:help>
         </x-form.text>
 
+        @error('invite_form.user_email')
+            <p class="text-danger mt-4">{{ $message }}</p>
+        @enderror
+
         <x-pack.button type="submit">Create</x-pack.button>
     </form>
 </x-pack.modal>

@@ -9,7 +9,7 @@ use Livewire\Form;
 
 class InviteForm extends Form
 {
-    #[Validate(['required', 'exists:users,email'])]
+    #[Validate(['required', 'exists:users,email'], message: ["*" => 'Entered email does not exist.'])]
     public $user_email;
     #[Validate(['required', 'exists:users,id'])]
     public $user_id;
